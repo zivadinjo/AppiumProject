@@ -8,7 +8,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
 public class CalculatorPage {
-
     public CalculatorPage(){
         PageFactory.initElements(new AppiumFieldDecorator(Driver.getDriver()),this);
     }
@@ -19,9 +18,10 @@ public class CalculatorPage {
     @AndroidFindBy(accessibility = "equals")
     public MobileElement equals;
 
-    @AndroidFindBy(id ="com.google.android.calculator:id/result_final")
+    @AndroidFindBy(id = "com.google.android.calculator:id/result_final")
     public MobileElement result;
 
+    //
     //com.google.android.calculator:id/digit_4
 
     public void clickDigit(int digit){
@@ -29,4 +29,5 @@ public class CalculatorPage {
         MobileElement number = Driver.getDriver().findElement(By.id(id));
         number.click();
     }
+
 }
